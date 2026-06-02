@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /politica-confidentialitate.html
+
+# Sitemap
+Sitemap: https://wifitom-service.ro/sitemap.xml
+
+# Crawl delay
+Crawl-delay: 1

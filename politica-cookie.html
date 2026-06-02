@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Politică Cookie – Wifitom Service</title>
+<meta name="robots" content="noindex, follow">
+<link rel="icon" type="image/png" href="logo1.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Barlow:wght@700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --navy:#1a2f5e;--navy-dark:#0f1d3d;--blue:#2952a3;
+  --red:#cc2b2b;--white:#fff;--off:#f4f6fb;
+  --gray:#6b7a99;--border:#dde3f0;--text:#1a2540;
+}
+body{font-family:'Plus Jakarta Sans',sans-serif;color:var(--text);background:var(--white);line-height:1.7}
+a{color:var(--blue);text-decoration:none}
+a:hover{text-decoration:underline}
+
+.nav{
+  background:#fff;border-bottom:1px solid var(--border);
+  padding:0 2rem;height:68px;
+  display:flex;align-items:center;justify-content:space-between;
+  position:sticky;top:0;z-index:100;box-shadow:0 2px 16px rgba(26,47,94,0.08);
+}
+.nav-logo img{height:48px;width:auto}
+.nav-back{
+  display:flex;align-items:center;gap:0.5rem;
+  font-size:0.88rem;font-weight:600;color:var(--navy);
+  border:1.5px solid var(--border);padding:0.5rem 1rem;
+  border-radius:6px;transition:all 0.2s;
+}
+.nav-back:hover{background:var(--navy);color:#fff;border-color:var(--navy);text-decoration:none}
+.nav-back svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:2}
+
+.hero{
+  background:linear-gradient(108deg,#f0f4ff 0%,#e8eef8 100%);
+  padding:4rem 2rem 3rem;text-align:center;
+}
+.hero-eye{
+  font-size:0.72rem;font-weight:700;letter-spacing:0.14em;
+  text-transform:uppercase;color:var(--red);margin-bottom:0.75rem;display:block;
+}
+.hero h1{
+  font-family:'Barlow',sans-serif;font-weight:900;
+  font-size:clamp(1.8rem,4vw,2.8rem);color:var(--navy);
+  letter-spacing:-0.5px;margin-bottom:0.75rem;
+}
+.hero-date{color:var(--gray);font-size:0.88rem}
+
+.content{max-width:780px;margin:0 auto;padding:3.5rem 2rem 5rem}
+.content h2{
+  font-family:'Barlow',sans-serif;font-weight:800;
+  font-size:1.25rem;color:var(--navy);
+  margin:2.5rem 0 0.75rem;
+}
+.content h2:first-child{margin-top:0}
+.content p{color:var(--gray);font-size:0.95rem;margin-bottom:1rem}
+.content ul{color:var(--gray);font-size:0.95rem;padding-left:1.5rem;margin-bottom:1rem}
+.content ul li{margin-bottom:0.4rem}
+.content strong{color:var(--text);font-weight:600}
+
+.info-box{
+  background:var(--off);border:1px solid var(--border);
+  border-radius:12px;padding:1.25rem 1.5rem;
+  margin:1.5rem 0;font-size:0.9rem;color:var(--gray);
+}
+.info-box strong{color:var(--navy)}
+
+footer{
+  background:var(--navy-dark);padding:2rem;text-align:center;
+}
+footer p{color:rgba(255,255,255,0.3);font-size:0.82rem}
+footer a{color:rgba(255,255,255,0.5);transition:color 0.2s}
+footer a:hover{color:#fff;text-decoration:none}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="index.html" class="nav-logo">
+    <img src="logo1.png" alt="Wifitom Service">
+  </a>
+  <a href="index.html" class="nav-back">
+    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    Înapoi la site
+  </a>
+</nav>
+
+<div class="hero">
+  <span class="hero-eye">Documente legale</span>
+  <h1>Politică Cookie</h1>
+  <p class="hero-date">Ultima actualizare: Iunie 2026</p>
+</div>
+
+<div class="content">
+
+  <h2>1. Ce sunt cookie-urile?</h2>
+  <p>Cookie-urile sunt fișiere text de mici dimensiuni pe care un site web le stochează în browserul tău atunci când vizitezi acel site. Ele permit site-ului să rețină anumite informații despre vizita ta pentru a îmbunătăți experiența de navigare.</p>
+
+  <h2>2. Ce cookie-uri folosim?</h2>
+  <p>Site-ul <strong>wifitom-service.ro</strong> folosește un număr minim de cookie-uri, exclusiv funcționale:</p>
+  <ul>
+    <li><strong>cookieChoice</strong> — reține preferința ta legată de acceptarea sau refuzul cookie-urilor. Se stochează local în browserul tău (localStorage) și nu este transmis către niciun server extern.</li>
+  </ul>
+
+  <div class="info-box">
+    <strong>Important:</strong> Site-ul nostru nu folosește cookie-uri de tracking, cookie-uri de publicitate sau cookie-uri de la terți (Google Analytics, Facebook Pixel etc.). Nu colectăm date despre comportamentul tău de navigare.
+  </div>
+
+  <h2>3. Cookie-uri de la terți</h2>
+  <p>Site-ul nostru nu integrează servicii de terți care să plaseze cookie-uri în browserul tău. Nu folosim Google Analytics, reclame Google, Facebook Pixel sau alte instrumente de tracking.</p>
+  <p>Singurul serviciu extern folosit este <strong>Supabase</strong> pentru stocarea recenziilor lăsate de clienți. Acesta funcționează prin apeluri API directe și nu plasează cookie-uri în browserul tău.</p>
+
+  <h2>4. Cum poți controla cookie-urile?</h2>
+  <p>Poți controla și/sau șterge cookie-urile după cum dorești. Poți șterge toate cookie-urile deja existente în computerul tău și poți seta majoritatea browserelor să blocheze plasarea lor.</p>
+  <p>Instrucțiuni pentru principalele browsere:</p>
+  <ul>
+    <li><a href="https://support.google.com/chrome/answer/95647" target="_blank">Google Chrome</a></li>
+    <li><a href="https://support.mozilla.org/ro/kb/activati-dezactivati-cookie-uri" target="_blank">Mozilla Firefox</a></li>
+    <li><a href="https://support.microsoft.com/ro-ro/microsoft-edge/ștergerea-cookie-urilor-în-microsoft-edge" target="_blank">Microsoft Edge</a></li>
+    <li><a href="https://support.apple.com/ro-ro/guide/safari/sfri11471/mac" target="_blank">Safari</a></li>
+  </ul>
+
+  <h2>5. Consimțământul tău</h2>
+  <p>La prima ta vizită pe site, îți este afișat un banner prin care îți cerem acordul pentru utilizarea cookie-urilor funcționale. Poți accepta sau refuza în orice moment. Preferința ta este reținută pentru vizitele ulterioare.</p>
+  <p>Dacă dorești să îți retragi consimțământul, poți șterge datele stocate local din setările browserului tău (Settings → Privacy → Clear browsing data → Cookies and site data).</p>
+
+  <h2>6. Modificări ale politicii</h2>
+  <p>Ne rezervăm dreptul de a modifica această politică oricând. Orice modificare va fi publicată pe această pagină cu data actualizării.</p>
+
+  <h2>7. Contact</h2>
+  <p>Pentru orice întrebări legate de utilizarea cookie-urilor pe acest site, ne poți contacta:</p>
+  <ul>
+    <li>Telefon: <a href="tel:0725177175">0725 177 175</a></li>
+    <li>WhatsApp: <a href="https://wa.me/40725177175" target="_blank">0725 177 175</a></li>
+  </ul>
+
+</div>
+
+<footer>
+  <p>© 2026 Wifitom Service PFA. Toate drepturile rezervate. &nbsp;|&nbsp; <a href="index.html">Înapoi la site</a></p>
+</footer>
+
+</body>
+</html>

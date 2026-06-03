@@ -2,7 +2,7 @@
 <html lang="ro">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
 <title>Wifitom Service – Reparații Mașini de Spălat București | Service Electrocasnice La Domiciliu | 0725 177 175</title>
 <meta name="description" content="✅ Reparații mașini de spălat rufe și vase, uscătoare — la domiciliu în București și 150 km. Intervenție rapidă, garanție 12 luni piese noi, 7 ani experiență. PFA autorizat. Sună acum: 0725 177 175">
 <meta name="keywords" content="
@@ -555,16 +555,33 @@ section{padding:5.5rem 2rem}
 .reviews-controls{
   display:flex;align-items:center;justify-content:center;
   gap:1.5rem;margin-top:1.75rem;
+  position:relative;z-index:10;
+  padding:0 0.5rem;
+}
+.reviews-bottom-bar{
+  display:flex;align-items:center;justify-content:center;
+  gap:1.25rem;margin-top:1.5rem;
+}
+.reviews-bottom-bar .btn-review-open{margin:0}
+@media(max-width:768px){
+  .reviews-bottom-bar{gap:0.75rem}
+  .reviews-bottom-bar .btn-review-open{font-size:0.82rem;padding:0.8rem 1.25rem}
 }
 .reviews-arrow{
-  width:44px;height:44px;border-radius:50%;
+  width:48px;height:48px;border-radius:50%;
   background:#fff;border:1.5px solid var(--border);
   display:flex;align-items:center;justify-content:center;
   cursor:pointer;transition:all 0.2s;flex-shrink:0;
+  box-shadow:0 2px 8px rgba(26,47,94,0.12);
 }
 .reviews-arrow:hover{background:var(--navy);border-color:var(--navy)}
 .reviews-arrow:hover svg{stroke:#fff}
-.reviews-arrow svg{width:18px;height:18px;stroke:var(--navy);fill:none;stroke-width:2;transition:stroke 0.2s}
+.reviews-arrow svg{width:20px;height:20px;stroke:var(--navy);fill:none;stroke-width:2.5;transition:stroke 0.2s}
+@media(max-width:768px){
+  .reviews-arrow{width:52px;height:52px}
+  .reviews-arrow svg{width:22px;height:22px}
+  .reviews-controls{gap:2rem;margin-top:1.5rem;padding:0 1rem}
+}
 .reviews-dots{display:flex;gap:0.5rem;align-items:center}
 .reviews-dot{
   width:8px;height:8px;border-radius:50%;
@@ -580,6 +597,14 @@ section{padding:5.5rem 2rem}
 
 /* ─── GALLERY ─── */
 .galerie-section{background:var(--off);padding:5.5rem 2rem}
+/* Gallery slider */
+.gallery-slider{position:relative}
+.gallery-track-wrap{overflow:hidden;border-radius:var(--radius-lg)}
+.gallery-track{display:flex;transition:transform 0.4s cubic-bezier(0.4,0,0.2,1)}
+.gallery-page{
+  flex:0 0 100%;min-width:0;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;
+}
 .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
 .gallery-item{
   border-radius:var(--radius-lg);overflow:hidden;
@@ -605,6 +630,35 @@ section{padding:5.5rem 2rem}
 }
 .gallery-btn:hover{background:var(--off)}
 .gallery-btn svg{width:13px;height:13px;flex-shrink:0}
+/* Gallery controls */
+.gallery-controls{
+  display:flex;align-items:center;justify-content:center;
+  gap:1.5rem;margin-top:1.5rem;
+}
+.gallery-arrow{
+  width:48px;height:48px;border-radius:50%;
+  background:#fff;border:1.5px solid var(--border);
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;transition:all 0.2s;flex-shrink:0;
+  box-shadow:0 2px 8px rgba(26,47,94,0.10);
+}
+.gallery-arrow:hover{background:var(--navy);border-color:var(--navy)}
+.gallery-arrow:hover svg{stroke:#fff}
+.gallery-arrow svg{width:20px;height:20px;stroke:var(--navy);fill:none;stroke-width:2.5;transition:stroke 0.2s}
+.gallery-dots{display:flex;gap:0.5rem;align-items:center}
+.gallery-dot{
+  width:8px;height:8px;border-radius:50%;
+  background:var(--border);cursor:pointer;border:none;padding:0;
+  transition:background 0.2s,transform 0.2s;
+}
+.gallery-dot.active{background:var(--navy);transform:scale(1.3)}
+@media(max-width:768px){
+  .gallery-page{grid-template-columns:1fr 1fr;gap:0.75rem}
+  .gallery-arrow{width:52px;height:52px}
+}
+@media(max-width:480px){
+  .gallery-page{grid-template-columns:1fr}
+}
 /* Lightbox */
 .lightbox{
   display:none;position:fixed;inset:0;z-index:2000;
@@ -628,7 +682,7 @@ section{padding:5.5rem 2rem}
 }
 .lightbox-actions .gallery-btn{font-size:0.85rem;padding:0.7rem 1.5rem}
 @media(max-width:768px){.gallery-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:480px){.gallery-grid{grid-template-columns:1fr}}
+
 
 /* ─── FAQ ─── */
 .faq-section{background:var(--off2);padding:5.5rem 2rem}
@@ -1296,21 +1350,21 @@ section{padding:5.5rem 2rem}
         </div>
       </div>
       <div class="reviews-controls" id="reviewsControls" style="display:none">
-        <button class="reviews-arrow" onclick="slideReview(-1)" aria-label="Precedenta">
-          <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
-        </button>
         <div class="reviews-dots" id="reviewsDots"></div>
-        <button class="reviews-arrow" onclick="slideReview(1)" aria-label="Urmatoarea">
-          <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
-        </button>
       </div>
     </div>
 
-    <!-- Buton lasă recenzie -->
-    <div style="text-align:center;margin-top:2.5rem">
+    <!-- Buton lasă recenzie + săgeți -->
+    <div class="reviews-bottom-bar">
+      <button class="reviews-arrow" onclick="slideReview(-1)" aria-label="Precedenta">
+        <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
       <button class="btn-review-open" onclick="openReviewModal()">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
         Lasă o recenzie
+      </button>
+      <button class="reviews-arrow" onclick="slideReview(1)" aria-label="Urmatoarea">
+        <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
       </button>
     </div>
   </div>
@@ -1369,7 +1423,10 @@ section{padding:5.5rem 2rem}
         Vezi toate pozele
       </a>
     </div>
-    <div class="gallery-grid">
+    <div class="gallery-slider">
+      <div class="gallery-track-wrap">
+        <div class="gallery-track" id="galleryTrack">
+    <div class="gallery-page">
       <div class="gallery-item" onclick="openLightbox('atelier.jpg')">
         <img src="atelier.jpg" alt="Atelier Wifitom Service – reparații electrocasnice">
         <div class="gallery-overlay">
@@ -1408,6 +1465,61 @@ section{padding:5.5rem 2rem}
             Vezi galeria
           </a>
         </div>
+      </div>
+    </div>
+    <div class="gallery-page">
+      <div class="gallery-item" onclick="openLightbox('masina-rufe.jpg')">
+        <img src="masina-rufe.jpg" alt="Reparații mașini de spălat rufe București">
+        <div class="gallery-overlay">
+          <button class="gallery-btn" onclick="event.stopPropagation();openLightbox('masina-rufe.jpg')">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            Vezi poza
+          </button>
+          <a href="https://photos.app.goo.gl/qCt4yrrtJEYnEZG47" target="_blank" class="gallery-btn" onclick="event.stopPropagation()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            Vezi galeria
+          </a>
+        </div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox('masina-vase.jpg')">
+        <img src="masina-vase.jpg" alt="Reparații mașini de spălat vase București">
+        <div class="gallery-overlay">
+          <button class="gallery-btn" onclick="event.stopPropagation();openLightbox('masina-vase.jpg')">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            Vezi poza
+          </button>
+          <a href="https://photos.app.goo.gl/qCt4yrrtJEYnEZG47" target="_blank" class="gallery-btn" onclick="event.stopPropagation()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            Vezi galeria
+          </a>
+        </div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox('florin.png')">
+        <img src="florin.png" alt="Florin – Tehnician Wifitom Service">
+        <div class="gallery-overlay">
+          <button class="gallery-btn" onclick="event.stopPropagation();openLightbox('florin.png')">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            Vezi poza
+          </button>
+          <a href="https://photos.app.goo.gl/qCt4yrrtJEYnEZG47" target="_blank" class="gallery-btn" onclick="event.stopPropagation()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            Vezi galeria
+          </a>
+        </div>
+      </div>
+    </div>
+        </div>
+      </div>
+      <div class="gallery-controls" id="galleryControls">
+        <button class="gallery-arrow" onclick="slideGallery(-1)" aria-label="Precedenta">
+          <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <div class="gallery-dots" id="galleryDots">
+          <button class="gallery-dot active" onclick="goToGallery(0)"></button><button class="gallery-dot" onclick="goToGallery(1)"></button>
+        </div>
+        <button class="gallery-arrow" onclick="slideGallery(1)" aria-label="Urmatoarea">
+          <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
       </div>
     </div>
   </div>
@@ -1669,7 +1781,7 @@ var sliderData = [];
 
 async function loadRecenzii() {
   try {
-    const res = await fetch(SUPA_URL + "/rest/v1/recenzii?select=*&order=created_at.desc&limit=20", {
+    const res = await fetch(SUPA_URL + "/rest/v1/recenzii?select=*&order=created_at.desc&limit=100", {
       headers: {
         "apikey": SUPA_KEY,
         "Authorization": "Bearer " + SUPA_KEY
@@ -1751,11 +1863,7 @@ window.addEventListener("resize", function() {
   }
 });
 
-// Auto-advance every 6s
-setInterval(function() {
-  var pages = document.querySelectorAll(".reviews-page").length;
-  if (pages > 1) slideReview(1);
-}, 6000);
+// No auto-advance
 
 function escapeHtml(str) {
   return String(str).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
@@ -1857,6 +1965,21 @@ function declineCookies() {
   localStorage.setItem("cookieChoice", "declined");
   document.getElementById("cookieBanner").classList.remove("show");
 }
+
+
+// ─── GALLERY SLIDER ───
+var galleryIndex = 0;
+function goToGallery(idx) {
+  var pages = document.querySelectorAll('.gallery-page').length;
+  if (idx < 0) idx = pages - 1;
+  if (idx >= pages) idx = 0;
+  galleryIndex = idx;
+  document.getElementById('galleryTrack').style.transform = 'translateX(-' + (idx * 100) + '%)';
+  document.querySelectorAll('.gallery-dot').forEach(function(d, i) {
+    d.classList.toggle('active', i === idx);
+  });
+}
+function slideGallery(dir) { goToGallery(galleryIndex + dir); }
 
 function toggleMenu(){
   var menu=document.getElementById('mobileMenu');

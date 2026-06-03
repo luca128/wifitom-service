@@ -113,7 +113,8 @@ pfa service electrocasnice bucuresti
   --shadow-md:0 4px 28px rgba(26,47,94,0.13);
 }
 html{scroll-behavior:smooth}
-body{font-family:'Plus Jakarta Sans',sans-serif;color:var(--text);background:var(--white);overflow-x:hidden;line-height:1.6}
+body{font-family:'Plus Jakarta Sans',sans-serif;color:var(--text);background:var(--white);overflow-x:hidden;line-height:1.6;max-width:100vw}
+html{overflow-x:hidden;max-width:100vw}
 a{text-decoration:none;color:inherit}
 img{max-width:100%;display:block}
 
@@ -557,6 +558,11 @@ section{padding:5.5rem 2rem}
   gap:1.5rem;margin-top:1.75rem;
   position:relative;z-index:10;
   padding:0 0.5rem;
+}
+.reviews-counter{
+  font-family:'Barlow',sans-serif;font-weight:800;
+  font-size:1.1rem;color:var(--navy);letter-spacing:0.02em;
+  min-width:64px;text-align:center;
 }
 .reviews-bottom-bar{
   display:flex;align-items:center;justify-content:center;
@@ -1349,9 +1355,7 @@ section{padding:5.5rem 2rem}
           </div>
         </div>
       </div>
-      <div class="reviews-controls" id="reviewsControls" style="display:none">
-        <div class="reviews-dots" id="reviewsDots"></div>
-      </div>
+      <div class="reviews-controls" id="reviewsControls" style="display:none"></div>
     </div>
 
     <!-- Buton lasă recenzie + săgeți -->
@@ -1359,10 +1363,13 @@ section{padding:5.5rem 2rem}
       <button class="reviews-arrow" onclick="slideReview(-1)" aria-label="Precedenta">
         <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
       </button>
-      <button class="btn-review-open" onclick="openReviewModal()">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
-        Lasă o recenzie
-      </button>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:0.5rem">
+        <div class="reviews-counter" id="reviewsCounter"></div>
+        <button class="btn-review-open" onclick="openReviewModal()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+          Lasă o recenzie
+        </button>
+      </div>
       <button class="reviews-arrow" onclick="slideReview(1)" aria-label="Urmatoarea">
         <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
       </button>
@@ -1801,6 +1808,9 @@ function getCardsPerPage() {
   return window.innerWidth <= 768 ? 1 : 3;
 }
 
+var VISIBLE_DOTS = 7;
+var dotWindowStart = 0;
+
 function renderSlider() {
   var track = document.getElementById("reviewsTrack");
   var dots = document.getElementById("reviewsDots");
@@ -1830,13 +1840,34 @@ function renderSlider() {
   }
   track.innerHTML = pagesHtml;
 
-  // Dots — one per page
-  dots.innerHTML = Array.from({length: pages}, (_, i) =>
-    `<button class="reviews-dot${i===0?' active':''}" onclick="goToSlide(${i})"></button>`
-  ).join("");
-
-  controls.style.display = pages > 1 ? "flex" : "none";
+  controls.style.display = "none"; // dots hidden, counter standalone
+  renderDots(pages, 0);
   goToSlide(0);
+}
+
+function renderDots(pages, activeIdx) {
+  var dots = document.getElementById("reviewsDots");
+  if (pages <= VISIBLE_DOTS) {
+    // toate bulele vizibile, bula activa se misca prin ele
+    dots.innerHTML = Array.from({length: pages}, (_, i) =>
+      `<button class="reviews-dot${i===activeIdx?' active':''}" onclick="goToSlide(${i})"></button>`
+    ).join("");
+  } else {
+    // fereastra fixa de 7, se misca doar cand activa e la margine (prima sau ultima din fereastra)
+    var start = dotWindowStart || 0;
+    // daca activa iese din fereastra, mutam fereastra
+    if (activeIdx < start) start = activeIdx;
+    if (activeIdx >= start + VISIBLE_DOTS) start = activeIdx - VISIBLE_DOTS + 1;
+    // clamp
+    if (start < 0) start = 0;
+    if (start + VISIBLE_DOTS > pages) start = pages - VISIBLE_DOTS;
+    dotWindowStart = start;
+    var html = "";
+    for (var i = start; i < start + VISIBLE_DOTS; i++) {
+      html += `<button class="reviews-dot${i===activeIdx?' active':''}" onclick="goToSlide(${i})"></button>`;
+    }
+    dots.innerHTML = html;
+  }
 }
 
 function goToSlide(idx) {
@@ -1846,9 +1877,7 @@ function goToSlide(idx) {
   sliderIndex = idx;
   var track = document.getElementById("reviewsTrack");
   track.style.transform = "translateX(-" + (idx * 100) + "%)";
-  document.querySelectorAll(".reviews-dot").forEach(function(d, i) {
-    d.classList.toggle("active", i === idx);
-  });
+  renderDots(pages, idx);
 }
 
 function slideReview(dir) {

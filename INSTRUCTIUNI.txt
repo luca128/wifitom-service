@@ -1,0 +1,38 @@
+WIFITOM – CE AI DE FĂCUT DUPĂ ACEST UPDATE
+==========================================
+
+1) ÎNAINTE DE DEPLOY – Supabase (5 minute)
+   - Intră în Supabase → proiectul cu recenziile → SQL Editor → New query
+   - Copiază tot din „supabase-moderare-recenzii.sql” → Run
+   - Abia după asta faci deploy. Altfel recenziile dispar de pe site până rulezi SQL-ul.
+   - De acum, recenziile noi le aprobi din Table Editor → recenzii → coloana „aprobat” = true.
+
+2) DEPLOY pe Vercel (ca de obicei)
+   - Înlocuiește TOT conținutul repo-ului cu conținutul acestui zip (șterge fișierele vechi: styles.css, logo1.png, pozele .jpg vechi — nu mai sunt folosite).
+   - NU urca pe server: INSTRUCTIUNI.txt și supabase-moderare-recenzii.sql (nu strică, dar n-au ce căuta acolo).
+
+3) TRACKING – după ce ai acces la Google Ads-ul lui Florin
+   - Deschide tracking.js și completează în WF_CONFIG:
+       GA4_ID          → din Google Analytics (G-XXXXXXX)
+       ADS_ID          → din Google Ads (AW-XXXXXXXX)
+       ADS_LABEL_CALL / ADS_LABEL_WHATSAPP → etichetele celor 2 conversii create în Ads
+   - Deploy din nou. Cât timp sunt goale, nu se încarcă nimic de la Google.
+
+4) GOOGLE SEARCH CONSOLE
+   - Trimite din nou sitemap.xml (are acum 6 pagini).
+   - Cere indexarea pentru cele 3 pagini noi de servicii.
+
+5) VITEZĂ (PageSpeed) – ce s-a schimbat în v3
+   - Fonturile sunt acum pe site (folderul /fonts), nu mai vin de la Google Fonts.
+   - CSS-ul e inclus direct în fiecare pagină (nu mai există styles.css).
+   - vercel.json setează cache pentru imagini/fonturi — trebuie urcat și el.
+   - Harta Google și recenziile se încarcă doar când vizitatorul ajunge la ele.
+   - Google Analytics/Ads se încarcă la prima interacțiune (scroll/atingere), nu la deschiderea paginii.
+   - Testează după deploy pe pagespeed.web.dev (nu pe localhost). Scorul pe mobil variază cu 2–4 puncte de la o rulare la alta.
+
+6) SEO – versiunea cu 43 de pagini noi (zone + hub)
+   - Domeniul principal este acum https://www.wifitom-service.ro (canonical, sitemap, schema).
+   - vercel.json redirecționează automat wifitom-service.ro → www.wifitom-service.ro.
+     ATENȚIE: în Vercel → Settings → Domains verifică să NU existe o redirecționare inversă (www → fără www), altfel apare buclă.
+   - Search Console: adaugă proprietatea „Domeniu” (wifitom-service.ro) sau prefixul https://www.wifitom-service.ro/,
+     trimite sitemap.xml și cere indexarea pentru: prima pagină, zone-deservite.html și 5–10 pagini de zonă importante.

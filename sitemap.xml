@@ -1,44 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-
-  <url>
-    <loc>https://wifitom-service.ro/</loc>
-    <lastmod>2026-06-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-    <image:image>
-      <image:loc>https://wifitom-service.ro/florin.png</image:loc>
-      <image:title>Florin – Tehnician Wifitom Service reparații electrocasnice București</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://wifitom-service.ro/atelier.jpg</image:loc>
-      <image:title>Atelier Wifitom Service – reparații mașini de spălat București</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://wifitom-service.ro/masini.jpg</image:loc>
-      <image:title>Mașini de spălat în service – Wifitom Service București</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://wifitom-service.ro/transport.jpg</image:loc>
-      <image:title>Intervenție la domiciliu – Wifitom Service București</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://wifitom-service.ro/masina-rufe.jpg</image:loc>
-      <image:title>Reparații mașini de spălat rufe la domiciliu București</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://wifitom-service.ro/masina-vase.jpg</image:loc>
-      <image:title>Reparații mașini de spălat vase la domiciliu București</image:title>
-    </image:image>
-  </url>
-
-  <url>
-    <loc>https://wifitom-service.ro/politica-cookie.html</loc>
-    <lastmod>2026-06-02</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.1</priority>
-  </url>
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://www.wifitom-service.ro/</loc><lastmod>2026-09-30</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://www.wifitom-service.ro/reparatii-masini-de-spalat-rufe.html</loc><lastmod>2026-09-30</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.wifitom-service.ro/reparatii-masini-de-spalat-vase.html</loc><lastmod>2026-09-30</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.wifitom-service.ro/reparatii-uscatoare-rufe.html</loc><lastmod>2026-09-30</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.wifitom-service.ro/zone-deservite.html</loc><lastmod>2026-09-30</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.wifitom-service.ro/reparatii-masini-de-spalat-sector-1.html</loc><lastmod>2026-09-30</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.wifitom-service.ro/reparatii-masini-de-spalat-sector-2.html</loc><lastmod>2026-09-30</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.wifitom-service.ro/reparatii-masini-de-spalat-sector-3.html</loc><lastmod>2026-09-30</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.wifitom-service.ro/reparatii-masini-de-spalat-sector-4.html</loc><lastmod>2026-09-30</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.wifitom-service.ro/reparatii-masini-de-spalat-sector-5.html</loc><lastmod>2026-09-30</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.wifitom-service.ro/reparatii-masini-de-spalat-sector-6.html</loc><lastmod>2026-09-30</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.wifitom-service.ro/reparatii-masini-de-spalat-ilfov.html</loc><lastmod>2026-09-30</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.wifitom-service.ro/reparatii-masini-de-spalat-voluntari.html</loc><lastmod>2026-09-30</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.wifitom-service.ro/reparatii-masini-de-spalat-otopeni.html</loc><lastmod>2026-09-30</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.wifitom-service.ro/reparatii-masini-de-spalat-buftea.html</loc><lastmod>2026-09-30</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.wifitom-service.ro/reparatii-masini-de-spalat-chitila.html</loc><lastmod>2026-09-30</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.wifitom-service.ro/reparatii-masini-de-spalat-snagov.html</loc><lastmod>2026-09-30</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.wifitom-service.ro/reparatii-masini-de-spalat-bragadiru.html</loc><lastmod>2026-09-30</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.wifitom-service.ro/reparatii-masini-de-spalat-popesti-leordeni.html</loc><lastmod>2026-09-30</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.wifitom-service.ro/reparatii-masini-de-spalat-pantelimon.html</loc><lastmod>2026-09-30</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.wifitom-service.ro/reparatii-masini-de-spalat-magurele.html</loc><lastmod>2026-09-30</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.wifitom-service.ro/reparatii-masini-de-spalat-chiajna.html</loc><lastmod>2026-09-30</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.wifitom-service.ro/reparatii-masini-de-spalat-mogosoaia.html</loc><lastmod>2026-09-30</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.wifitom-service.ro/reparatii-masini-de-spalat-corbeanca.html</loc><lastmod>2026-09-30</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.wifitom-service.ro/reparatii-masini-de-spalat-balotesti.html</loc><lastmod>2026-09-30</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.wifitom-service.ro/reparatii-masini-de-spalat-stefanestii-de-jos.html</loc><lastmod>2026-09-30</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.wifitom-service.ro/reparatii-masini-de-spalat-tunari.html</loc><lastmod>2026-09-30</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.wifitom-service.ro/reparatii-masini-de-spalat-afumati.html</loc><lastmod>2026-09-30</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.wifitom-service.ro/reparatii-masini-de-spalat-dobroesti.html</loc><lastmod>2026-09-30</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.wifitom-service.ro/reparatii-masini-de-spalat-domnesti.html</loc><lastmod>2026-09-30</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.wifitom-service.ro/reparatii-masini-de-spalat-clinceni.html</loc><lastmod>2026-09-30</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.wifitom-service.ro/reparatii-masini-de-spalat-jilava.html</loc><lastmod>2026-09-30</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.wifitom-service.ro/reparatii-masini-de-spalat-glina.html</loc><lastmod>2026-09-30</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.wifitom-service.ro/reparatii-masini-de-spalat-cernica.html</loc><lastmod>2026-09-30</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.wifitom-service.ro/reparatii-masini-de-spalat-berceni-ilfov.html</loc><lastmod>2026-09-30</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.wifitom-service.ro/reparatii-masini-de-spalat-ploiesti.html</loc><lastmod>2026-09-30</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.wifitom-service.ro/reparatii-masini-de-spalat-campina.html</loc><lastmod>2026-09-30</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.wifitom-service.ro/reparatii-masini-de-spalat-sinaia.html</loc><lastmod>2026-09-30</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.wifitom-service.ro/reparatii-masini-de-spalat-pitesti.html</loc><lastmod>2026-09-30</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.wifitom-service.ro/reparatii-masini-de-spalat-targoviste.html</loc><lastmod>2026-09-30</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.wifitom-service.ro/reparatii-masini-de-spalat-gaesti.html</loc><lastmod>2026-09-30</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.wifitom-service.ro/reparatii-masini-de-spalat-titu.html</loc><lastmod>2026-09-30</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.wifitom-service.ro/reparatii-masini-de-spalat-moreni.html</loc><lastmod>2026-09-30</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.wifitom-service.ro/reparatii-masini-de-spalat-giurgiu.html</loc><lastmod>2026-09-30</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.wifitom-service.ro/reparatii-masini-de-spalat-urziceni.html</loc><lastmod>2026-09-30</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.wifitom-service.ro/reparatii-masini-de-spalat-slobozia.html</loc><lastmod>2026-09-30</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.wifitom-service.ro/reparatii-masini-de-spalat-oltenita.html</loc><lastmod>2026-09-30</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.wifitom-service.ro/politica-confidentialitate.html</loc><lastmod>2026-09-30</lastmod><changefreq>yearly</changefreq><priority>0.2</priority></url>
+  <url><loc>https://www.wifitom-service.ro/politica-cookie.html</loc><lastmod>2026-09-30</lastmod><changefreq>yearly</changefreq><priority>0.2</priority></url>
 </urlset>

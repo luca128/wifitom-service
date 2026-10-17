@@ -1,6 +1,6 @@
 # Wifitom Service
 
-> Service independent de reparații la domiciliu pentru mașini de spălat rufe, mașini de spălat vase și uscătoare de rufe, în București (toate cele 6 sectoare), județul Ilfov și orașele din raza de 150 km. Atelier: Bulevardul Iuliu Maniu 111, 061114 București (Sector 6, lângă metrou Pacii). Telefon: 0725 177 175 (și WhatsApp), 0731 786 766. Email: fjuniortoma@gmail.com. Program: Luni–Vineri 07:30–22:00, Sâmbătă 08:00–16:00. Garanție scrisă 12 luni pentru piese noi, 6 luni pentru piese second-hand. Prețul se comunică după diagnostic, înainte de reparație. Firma: CARILA FRIGO S.R.L., CUI RO49869201, J2024000343529, sediu social Joița, jud. Giurgiu.
+> Service independent de reparații la domiciliu pentru mașini de spălat rufe, mașini de spălat vase și uscătoare de rufe, în București (toate cele 6 sectoare), județul Ilfov și orașele din raza de 150 km. Atelier: Bulevardul Iuliu Maniu 111, 061114 București (Sector 6, lângă metrou Pacii). Telefon: 0725 177 175 (și WhatsApp), 0731 786 766. Email: fjuniortoma@gmail.com. Program: Luni–Vineri 07:30–22:00, Sâmbătă 08:00–16:00. Garanție scrisă 12 luni pentru piese noi, 6 luni pentru piese second-hand. Prețul se comunică după diagnostic, înainte de reparație.
 
 ## Servicii
 - [Reparații mașini de spălat rufe](https://www.wifitom-service.ro/reparatii-masini-de-spalat-rufe.html)
@@ -13,3 +13,4 @@
 
 ## Ghiduri
 - [Defecte frecvente la mașini de spălat și uscătoare](https://www.wifitom-service.ro/defecte-frecvente.html)
+- [Coduri de eroare la mașina de spălat, pe mărci](https://www.wifitom-service.ro/coduri-eroare-masina-de-spalat.html)
